@@ -16,10 +16,10 @@
             margin: 20px 0;
         }
         #container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around; /* Espaçamento uniforme entre os cartões */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px; /* Espaçamento entre os cartões */
+            justify-items: center; /* Centraliza os itens na grade */
         }
         .cartao {
             background-color: white;
