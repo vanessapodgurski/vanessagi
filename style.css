@@ -1,169 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashCard Sertanejo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        header, footer {
-            text-align: center;
-            margin: 20px 0;
-        }
-        #container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around; /* Espaçamento uniforme entre os cartões */
-            gap: 20px; /* Espaçamento entre os cartões */
-        }
-        .cartao {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            perspective: 1000px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .cartao__conteudo {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-        .cartao__conteudo__pergunta, .cartao__conteudo__resposta {
-            position: absolute;
-            width: 100%;
-            backface-visibility: hidden;
-            padding: 20px;
-        }
-        .cartao__conteudo__pergunta {
-            background-color: #ffffff;
-            color: #000;
-        }
-        .cartao__conteudo__resposta {
-            background-color: #4CAF50;
-            color: #fff;
-            transform: rotateY(180deg);
-        }
-        .cartao:hover .cartao__conteudo {
-            transform: rotateY(180deg);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>FlashCard Sertanejo</h1>
-    </header>
-    <main>
-        <section id="container">
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Quem é conhecido como o "Rei da Música Sertaneja"?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Zezé Di Camargo.
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Qual a música mais famosa de Jorge e Mateus?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        "Flor".
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é o estado brasileiro com mais artistas sertanejos famosos?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Goiás.
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Quem forma a dupla Chitãozinho e Xororó?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Chitãozinho e Xororó são os nomes reais de Francisco e José Lima.
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é a canção de sucesso de Marília Mendonça lançada em 2019?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        "Infiel".
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Quem é a "Rainha da Sofrência"?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Marília Mendonça.
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é a música mais famosa de Gusttavo Lima?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        "Apelido Carinhoso".
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao" onclick="playSound()">
-                <div class="cartao__conteudo">
-                    <div class="cartao__conteudo__pergunta">
-                        Qual é o principal tema das músicas sertanejas?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        Amor e relacionamentos.
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>Projeto desenvolvido nas aulas de Programação II, sem fins lucrativos</p>
-    </footer>
-
-    <audio id="sound" src="sua_musica.mp3"></audio>
-    <script>
-        function playSound() {
-            const sound = document.getElementById('sound');
-            sound.currentTime = 0; // Recomeçar o som
-            sound.play();
-        }
-    </script>
-</body>
-</html>
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+header, footer {
+    text-align: center;
+    margin: 20px 0;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espaçamento uniforme entre os cartões */
+    gap: 20px; /* Espaçamento entre os cartões */
+}
+.cartao {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.cartao__conteudo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.cartao__conteudo__pergunta, .cartao__conteudo__resposta {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    padding: 20px;
+}
+.cartao__conteudo__pergunta {
+    background-color: #ffffff;
+    color: #000;
+}
+.cartao__conteudo__resposta {
+    background-color: #4CAF50;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
