@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Georgia', serif; /* Fonte mais rústica */
+    background-color: #e9d3b3; /* Cor de fundo mais suave e quente */
     margin: 0;
     padding: 20px;
 }
@@ -8,6 +8,8 @@ body {
 header, footer {
     text-align: center;
     margin: 20px 0;
+    font-size: 24px; /* Aumentar o tamanho da fonte do cabeçalho e rodapé */
+    color: #6B4F4F; /* Cor marrom escuro */
 }
 
 #container {
@@ -18,13 +20,14 @@ header, footer {
 }
 
 .cartao {
-    background-color: white;
+    background-color: #fdf4e3; /* Fundo claro com um toque amarelado */
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
     width: 300px;
     height: 200px; /* Definindo altura fixa para os cartões */
     perspective: 1000px;
     cursor: pointer;
+    border: 2px solid #d7c8b3; /* Borda rústica */
 }
 
 .cartao__conteudo {
@@ -45,18 +48,20 @@ header, footer {
     display: flex; /* Flex para centralizar conteúdo */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    font-size: 18px; /* Tamanho da fonte */
+    font-size: 20px; /* Tamanho da fonte aumentado */
 }
 
 .cartao__conteudo__pergunta {
-    background-color: #ffffff;
-    color: #000;
+    background-color: #ffffff; /* Fundo branco */
+    color: #4B3C3C; /* Cor marrom escuro */
+    border: 1px solid #d7c8b3; /* Borda leve */
 }
 
 .cartao__conteudo__resposta {
-    background-color: #4CAF50;
+    background-color: #8FBC8F; /* Verde mais suave e terroso */
     color: #fff;
     transform: rotateY(180deg);
+    border: 1px solid #6B4F4F; /* Borda escura */
 }
 
 .cartao:hover .cartao__conteudo {
